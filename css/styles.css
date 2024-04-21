@@ -201,7 +201,7 @@ p {
 .solutions {
     padding-top: 96px;
     padding-bottom: 96px;
-
+    
 }
 
 .solution-list {
@@ -222,12 +222,11 @@ p {
 /* Our Team section */
 
 .our-team {
+    /* padding-top: 120px; */
+    /* padding-bottom: 120px; */
     background-color: #f4f4fd;
-}
-
-.our-team {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .person-details {
@@ -236,17 +235,25 @@ p {
 
 }
 
+.container {
+    width: 296px;
+    /* padding-left: 12px; */
+    /* padding-right: 12px; */
+}
+
 .team-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
     background-color: inherit;
-    gap: 24px;
+    gap: 72px;
 }
 
 .team-list-item {
     background-color: #fff;
     border-radius: 0 0 4px 4px;
-    width: calc((100% - 3 * 24px) / 4);
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     border-radius: 0 0 4px 4px;
 }
@@ -255,22 +262,25 @@ p {
     display: block;
 }
 
+
 .team-list-heading {
-    text-align: center;
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
     letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.2;
     color: #2e2f42;
 }
 
 .team-list-text {
     text-align: center;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
+    color: #434455;
 }
 
 .person-social-list {
@@ -286,7 +296,7 @@ p {
 
 .social-icon-link {
     display: flex;
-    widows: 100%;
+    width: 100%;
     height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
@@ -297,14 +307,6 @@ p {
 
 .svg-icon {
     fill: #f4f4fd;
-}
-
-.social-icon-link:hover {
-    background-color: #404bbf;
-}
-
-.social-icon-link:focus {
-    background-color: #404bbf;
 }
 
 
@@ -870,21 +872,60 @@ p {
     .solution-list {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 72px 24px;
     }
 
     .solution-list-item {
         width: calc((100% - 24px) / 2);
     }
 
+    /* _____________________OUR TEAM (Tablet)________________ */
+
+    .our-team {
+        /* padding-top: 120px; */
+        /* padding-bottom: 120px; */
+        padding-top: 100px;
+        padding-bottom: 92px;
+    }
+    
+    .container {
+        width: 584px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    .team-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: inherit;
+        gap: 64px 24px;
+    }
+
+    .team-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .person-details {
+        padding-top: 32px 16px;
+    
+    }
+
+    /* _____________________PORTFOLIO (Tablet)________________ */
+
+
 }
 
 @media screen and (min-width: 1158px) {
     .container {
-        max-width: 1158px;
+        min-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
         }
+
+
+/* #########################_____MEDIA______###################### */
 
 /* _____________________HERO SECTION (Desktop)________________ */
 
@@ -908,7 +949,6 @@ p {
     .hero-secsection .hero-btn:focus {
         background-color: #404bbf;
     }
-
 
 
 /* _____________________SOLUTION SECTION (Desktop)________________ */
@@ -949,5 +989,44 @@ p {
         .solution-list-item {
             width: calc((100% - 2 * 24px) / 4);
     }
+
+    /* _____________________OUR TEAM (Desktop)________________ */
+
+
+        .our-team {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        
+        }
+    
+        .person-details {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        
+        }
+
+        .team-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: inherit;
+            gap: 24px;
+        }
+        
+        .team-list-item {
+            width: calc((100% - 3 * 24px) / 4);
+        }
+
+        .social-icon-link:hover {
+            background-color: #404bbf;
+        }
+        
+        .social-icon-link:focus {
+            background-color: #404bbf;
+        }
+
+    /* _____________________PORTFOLIO (Desktop)________________ */
+
+
 
 }
