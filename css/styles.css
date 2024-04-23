@@ -35,10 +35,6 @@ img {
   }
 
 .container {
-    /* max-width: 1158px; */
-    /* padding: 0 15px; */
-    /* margin: 0 auto; */
-
     max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
@@ -58,6 +54,7 @@ img {
 
 .header-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -69,8 +66,9 @@ img {
 }
 
 .nav-menu {
-    display: flex;
-    gap: 40px;
+    /* display: flex; */
+    display: none;
+    /* gap: 40px; */
 }
 
 .nav-logo {
@@ -81,68 +79,37 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px;
+    /* margin-right: 76px; */
+    padding-top: 17px;
+    padding-bottom: 17px;
+
 }
 
 .accent {
     color: #2e2f42;
 }
 
-.nav-menu-link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    padding: 24px 0;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-menu .nav-menu-link:hover,
-.nav-menu .nav-menu-link:focus {
-    color: #404bbf;
-}
-
-.current {
-    position: relative;
-    color: #404bbf;
-}
-
-.current::after {
-    content: "";
-    position: absolute;
-    background-color: #404bbf;
-    border-radius: 2px;
-    height: 4px;
-    width: 100%;
-    left: 0;
-    bottom: -1px;
-}
 
 .address {
     font-style: normal;
     margin-left: auto;
+    display: none;
 }
 
-.address-menu {
+/* .address-menu {
     display: flex;
     gap: 40px;
-}
+} */
 
-.address-menu-link {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.address-menu .address-menu-link:hover,
-.address-menu .address-menu-link:focus {
-    color: #404bbf;
-}
 
+.hamburgermenu-btn {
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 0;
+    border: none;
+}
 
 /* Hero section */
 
@@ -339,11 +306,10 @@ img {
 
 
 
-.portfolio-list-item {
+.portfolio-list-item:not(:last-child) {
     margin-bottom: 48px;
     
-    /* width: calc((100% - 2 * 24px) / 3); */
-    
+  
 }
 
 .portfolio-list-item {
@@ -443,13 +409,16 @@ img {
 
 .page-footer-container {
     display: flex;
-        align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 72px;
 }
 
 .page-footer {
     background-color: #2e2f42;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .footer-logo {
@@ -474,12 +443,17 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    max-width: 264px;
+    width: auto;
 }
 
-.footer-logo-container {
-    margin-right: 120px;
+.footer-logo-container, .footer-social-media, .subscribe {
+    display: flex   ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .social-heading {
     font-weight: 500;
@@ -488,6 +462,7 @@ img {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+
 }
 
 .social-items {
@@ -500,7 +475,8 @@ img {
     height: 40px;
 }
 
-.social-link {display: flex;
+.social-link {
+    display: flex;
     widows: 100%;
     height: 100%;
     background-color: #4d5ae5;
@@ -771,7 +747,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-bottom: 16px;;
+    margin-bottom: 16px;
 }
 
 .priv-polcy {
@@ -783,15 +759,14 @@ img {
 
 /* Subscribe */
 
-.subscribe {
-    margin-left: 80px;
-}
-
 .subscribe-footer-form {
     display: flex;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    /* justify-content: flex-start; */
+    /* gap: 24px; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .email-input {
@@ -807,7 +782,8 @@ img {
     color: #ffffff;
     line-height: 2;
     letter-spacing: 0.04em;
-    width: 264px;
+    /* width: 264px; */
+    width: 288px;
     height: 40px;
     padding-left: 16px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -877,6 +853,77 @@ img {
 
     }
 
+/* ______________________HEADER (Tablet)__________________ */
+
+
+    .hamburgermenu-btn {
+        display: none;
+    }
+
+    .nav-logo {
+        margin-right: 120px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-menu-link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        padding: 24px 0;
+        display: block;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-menu .nav-menu-link:hover,
+    .nav-menu .nav-menu-link:focus {
+        color: #404bbf;
+    }
+    
+    .current {
+        position: relative;
+        color: #404bbf;
+    }
+    
+    .current::after {
+        content: "";
+        position: absolute;
+        background-color: #404bbf;
+        border-radius: 2px;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+    }
+
+    .address {
+        display: block;
+    }
+
+    .address-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .address-menu-link {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .address-menu .address-menu-link:hover,
+    .address-menu .address-menu-link:focus {
+        color: #404bbf;
+    }
  /* ______________________HERO SECTION (Tablet)__________________ */
 
     .hero-heading {
@@ -906,15 +953,11 @@ img {
 
     /* _____________________OUR TEAM (Tablet)________________ */
 
-
     .ourteam-phone {
         max-width: 584px;
-   
    }
 
     .our-team {
-        /* padding-top: 120px; */
-        /* padding-bottom: 120px; */
         padding-top: 100px;
         padding-bottom: 92px;
     }
@@ -939,7 +982,6 @@ img {
 
     /* _____________________OUR PORTFOLIO (Tablet)________________ */
 
-
     .our-portfolio {
         padding-top: 92px;
         padding-bottom: 96px;
@@ -959,6 +1001,30 @@ img {
     .portfolio-list-item {
         width: calc((100% - 24px) / 2);
     }
+
+    /* _____________________FOOTER (Tablet)________________ */
+
+    .page-footer-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        padding-left: 108px;
+    }
+
+    .footer-logo-container {
+        width: 264px;
+        align-items: start;
+    }
+    .footer-social-media, .subscribe {
+        align-items: start;
+    }
+    .subscribe-footer-form {
+      flex-direction: row;
+      gap: 24;
+      
+    }
+    
 }
 
 
@@ -970,6 +1036,27 @@ img {
         padding-left: 15px;
         padding-right: 15px;
         }
+
+
+/* _____________________HEADER (Desktop)________________ */
+
+    .nav-logo {
+        margin-right: 76px;
+}
+
+    .address-menu {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+
+    .address-menu-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
 /* _____________________HERO SECTION (Desktop)________________ */
 
@@ -1070,6 +1157,13 @@ img {
 
     /* _____________________OUR PORTFOLIO (Desktop)________________ */
 
+    @media screen and (min-width: 1158px) {
+        .portfolio-list-item:not(:last-child) {
+            margin-bottom: 0px;
+                                 
+        }
+    }
+
     .our-portfolio {
         padding-top: 120px;
         padding-bottom: 120px;
@@ -1143,4 +1237,34 @@ img {
         border: 1px solid #e7e9fc;
         border-top: none;
     }
+
+    /* _____________________FOOTER (Desktop)________________ */
+
+    .page-footer-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        gap: 0;
+    }
+    
+    .page-footer {
+        background-color: #2e2f42;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+     
+    .footer-logo-container {
+        margin-right: 120px;
+    }
+    
+     .subscribe {
+        margin-left: 80px;
+    }
+
+
+
+
+
 }
+      
+    
