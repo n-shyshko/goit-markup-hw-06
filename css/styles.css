@@ -473,8 +473,8 @@ img {
 }
 
 .modal {
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     background-color: #fcfcfc;
     border-radius: 4px;
     position: absolute;
@@ -482,9 +482,9 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 72px;
-    padding-right: 24px;
+    padding-right: 16px;
     padding-bottom: 24px;
-    padding-left: 24px;
+    padding-left: 16px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -653,16 +653,13 @@ img {
     background-color: #404bbf;
 }
 
+
 .check-text {
+    display: inline-flex;
     font-size: 12px;
     letter-spacing: 0.04em;
     color:#8e8f99;
-    align-items: baseline;
-    gap: 8px;
-    padding-top: 16px;
-    padding-bottom: 24px;
     line-height: 1.17;
-    
 }
 
 .check-text span {
@@ -678,12 +675,13 @@ img {
 
 .check-span {
     display: inline-flex;
-    align-items: center;
+    flex-shrink: 0;
     justify-content: center;
+    align-items: center;
 }
 
-
-.modal-check:checked + .check-text span{
+    
+.modal-check:checked + .check-text span {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
@@ -693,7 +691,8 @@ img {
 
 .modal-checkbox {
     margin-bottom: 24px;
-
+    margin-top: 16px;
+   
 }
 
 .subscribe-heading {
@@ -702,11 +701,11 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-bottom: 16px;
+    margin-bottom: 16px;;
 }
 
 .priv-polcy {
-    line-height: 1.33333;
+    line-height: 1.33;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #4d5ae5;
@@ -975,7 +974,33 @@ img {
       gap: 24;
       
     }
+    /* _____________________HEADER (Tablet)________________ */
+
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+
+    .check-text {
+        padding-top: 16px;
+        padding-bottom: 24px;
+      
+    }
+
+    .check-span {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-checkbox {
+        margin-bottom: 24px;
     
+    }
+
+
 }
 
 
