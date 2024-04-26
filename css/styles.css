@@ -213,16 +213,16 @@ padding-bottom: 24px;
     margin: 0 auto;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx),
-  (min-resolution: 192dpi) {
-  .hero-wrap {
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-section {
     background-image: linear-gradient(
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
-      ),
-      url(../images/hero/people-office_m_2x.jpg);
-  }
+    ),
+    url(../images/hero/people-office_m_2x.jpg);
+    }
 }
 
 .hero-heading {
@@ -278,7 +278,7 @@ padding-bottom: 24px;
 
 
 .solution-list-item:not(:last-child)  {
-    margin-bottom: 72px;
+padding-bottom: 72px;
 }
 
 .solution-section-img {
@@ -311,7 +311,10 @@ padding-bottom: 24px;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     border-radius: 0 0 4px 4px;
-    margin-top: 72px;
+}
+
+.team-list-item:not(:last-child)  {
+    margin-bottom: 72px;
 }
 
 .team-list-image {
@@ -391,8 +394,28 @@ padding-bottom: 24px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+    
+.overlay-img {
+    position: relative;
+    overflow: hidden;
+}
+
+
 .overlay-p {
-    visibility: hidden;
+    position: absolute;
+    visibility: visible;
+    top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .app-details {
@@ -958,7 +981,7 @@ padding-bottom: 24px;
 
     .hero-section {
         padding-top: 112px;
-        padding-bottom: 204px;
+        padding-bottom: 112px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -969,12 +992,12 @@ padding-bottom: 24px;
     @media screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    .hero-wrap {
+    .hero-section {
     background-image: linear-gradient(
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
       ),
-      url(../images/hero/people-office_d_tx.jpg);
+      url(../images/hero/people-office_t_2x.jpg);
   }
 }
 
@@ -991,6 +1014,12 @@ padding-bottom: 24px;
         gap: 72px 24px;
     }
 
+    .solution-list-item:not(:last-child)  {
+        padding-bottom: 0px;
+        }
+        
+        
+
     .solution-list-item {
         width: calc((100% - 24px) / 2);
     }
@@ -1004,6 +1033,10 @@ padding-bottom: 24px;
     .our-team {
         padding-top: 100px;
         padding-bottom: 92px;
+    }
+
+    .team-list-item:not(:last-child)  {
+        margin-bottom: 0px;
     }
 
      .team-list {
@@ -1059,7 +1092,8 @@ padding-bottom: 24px;
         justify-content: flex-start;
         flex-wrap: wrap;
         gap: 72px 24px;
-        padding-left: 108px;
+        /* padding-left: 108px; */
+        width: 584px;
     }
 
     .footer-logo-container {
@@ -1134,7 +1168,7 @@ padding-bottom: 24px;
         @media screen and (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 2dppx),
         (min-resolution: 192dpi) {
-        .hero-wrap {
+        .hero-section {
         background-image: linear-gradient(
             rgba(17, 17, 17, 0.4),
             rgba(17, 17, 17, 0.4)
@@ -1233,6 +1267,10 @@ padding-bottom: 24px;
         padding-bottom: 120px;
         
     }
+
+    .team-list-item:not(:last-child)  {
+        margin-bottom: 0px;
+    }
     
     .person-details {
         padding-top: 32px;
@@ -1294,33 +1332,11 @@ padding-bottom: 24px;
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
     }
+
     
-    .overlay-img {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    
-    .portfolio-list-item:hover .overlay-p {
-        transform: translateY(0%);
-    }
-    
-    .overlay-p {
-        position: absolute;
-        visibility: visible;
-        top: 0;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #f4f4fd;
-        padding: 40px 32px;
-        background-color: #4d5ae5;
-        height: 100%;
-        width: 100%;
-        transform: translateY(100%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+.portfolio-list-item:hover .overlay-p {
+    transform: translateY(0%);
+}
     
     .portfolio-list-image {
         display: block;
