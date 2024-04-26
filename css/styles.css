@@ -1356,6 +1356,7 @@ padding-bottom: 72px;
         flex-wrap: nowrap;
         align-items: baseline;
         gap: 0;
+        width: auto;
     }
     
     .page-footer {
